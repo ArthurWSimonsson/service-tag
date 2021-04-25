@@ -1,5 +1,6 @@
 const tagController = require('../controllers/tagController')
 
+// Route for tag API.
 const routes = async(app, options) => {
     app.post('/api/tag', async (request, reply) => {
         try {

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+// Tag schema
 const tagSchema = new mongoose.Schema({
     uuid: {
         type: String,

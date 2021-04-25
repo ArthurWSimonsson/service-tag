@@ -1,5 +1,6 @@
 const Tag = require('../models/Tag')
 
+// Adds a tag to the tag database
 exports.addTag = async (req) => {
     let tag = {
         name: req.name,
