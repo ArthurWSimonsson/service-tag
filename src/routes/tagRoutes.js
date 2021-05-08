@@ -6,6 +6,9 @@ const routes = async(app, options) => {
         try {
             console.log('body is ', request.body)
 
+            if(request.body.name == 'error' || request.body.name == 'example')
+                throw "error name can't be: " + request.body.name;
+
             let tag = await tagController.addTag(request.body)
 
             reply.code(200).send({
