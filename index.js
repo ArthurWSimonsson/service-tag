@@ -1,8 +1,9 @@
 const fastify = require('./server.js')
+require("dotenv").config();
 
 const start = async () => {
     try {
-        await fastify.listen(3005, '0.0.0.0')
+        await fastify.listen(process.env.PORT, '0.0.0.0')
         fastify.log.info(`server listening on ${fastify.server.address().port}`)
     } 
     catch (err) {
